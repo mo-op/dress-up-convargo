@@ -2,22 +2,54 @@
 <html>
   <head>
     <title>CSS/HTML Workshop with Convargo.</title>
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   </head>
   <body>
-    <div id="trucker">
-      <input class="name" type="text" placeholder="Trucker name"/>
+  <div class="section-content">
+    <h1 class="section-header">Calculate your <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s">Convargo prices</span></h1>
+  </div>
+  <div class="container">
+  <form class="contact">
+    <div class="contact-section" id="content">
+    <div id="trucker" class="col-md-6 form-line">
+      <!-- <input class="name" type="text" placeholder="Trucker name"/> -->
+      <label for="TruckerUsername">Trucker Name</label>
+      <input type="text" class="name" placeholder=" Enter Name"> <br>
+      <label for="TInputKmPrice">Price per km</label>
+      <input class="price-by-km" type="number" placeholder="Enter Price /km"/> <br>
+      <label for="TInputM3Price">Price per m3</label>
+      <input class="price-by-cubic" type="number" placeholder="Enter Price /km"/> <br>
+      <input class="option" type="checkbox" placeholder="Deductible option" style="display:none" /> <br>
+<!-- 
       <input class="price-by-km" type="number" placeholder="Price by km"/>
-      <input class="price-by-cubic" type="number" placeholder="Price by m3"/>
+      <input class="price-by-cubic" type="number" placeholder="Price by m3"/>-->
     </div>
-    <div id="shipper">
-      <input class="name" type="text" placeholder="Shipper name"/>
-      <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="volume" type="number" placeholder="Volume in m3"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
+    <div id="shipper" class="col-md-6">
+          <label for="TruckerUsername">Shipper Name</label>
+      <input class="name" type="text" placeholder="Shipper name"/> <br>
+            <label for="TInputKmPrice">Distance (km)</label>
+      <input class="distance" type="number" placeholder="Distance in km"/> <br>
+            <label for="TInputM3Price">Volume (m3)</label>
+
+      <input class="volume" type="number" placeholder="Volume in m3"/> <br>
+      <label> Deductible </label>
+      <input class="option" type="checkbox" placeholder="Deductible option"/> <br>
     </div>
-    <button id="compute">Compute</button>
+    <button type="button" id="compute"class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i> Compute</button>
+  </div>
+  </form>
     <div id="actors"></div>
     <script src="convargo.js"></script>
     <script src="index.js"></script>
+  </div>
   </body>
 </html>
